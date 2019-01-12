@@ -12,29 +12,6 @@ var PORT = 3000;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// Star Wars Characters (DATA)
-// =============================================================
-var reservations = [
-  {
-    Uuid: 1,
-    name: "Yoda",
-    phoneNumber: "8009990909",
-    email: "imamoron@gmail.com"
-  },
-  {
-    Uuid: 2,
-    name: "wah",
-    phoneNumber: "8009990909",
-    email: "imamoron@gmail.com"
-  },
-  {
-    Uuid: 3,
-    name: "okay",
-    phoneNumber: "8009990909",
-    email: "imamoron@gmail.com"
-  }
-];
-
 // Routes
 // =============================================================
 
@@ -67,6 +44,21 @@ app.get("/api/table/:table", function(req, res) {
   return res.json(false);
 });
 
+app.get("api/reservations/:reservation", function(req, res) {
+  var table = req.params.reservation;
+
+  console.log(table);
+
+  
+  for (var i = 0; i < tables.length; i++) {
+    if (chosen === tables[i].routeName) {
+      return res.json(tables[i]);
+    }
+  }
+
+  return res.json(false);
+})
+
 // Create New Characters - takes in JSON input
 app.post("/api/table", function(req, res) {
   // req.body hosts is equal to the JSON post sent from the user
@@ -89,3 +81,18 @@ app.post("/api/table", function(req, res) {
 app.listen(PORT, function() {
   console.log("App listening on PORT " + PORT);
 });
+
+var tables = [
+  {
+    uuid: 1,
+    name: "Joe Blow",
+    phoneNumber: "555-555-5555",
+    email: "joeblow@aol.com"
+  },
+  {
+    uuid: 2,
+    name: "Mary Jane",
+    phoneNumber: "555-420-5555",
+    email: "MJ@aol.com"
+  }
+]
