@@ -4,7 +4,7 @@
 <!-- two buttons make reserversations, make tables -->
 <head>
   <meta charset="UTF-8">
-  <title>Star Wars - Express</title>
+  <title>Flappy Ears Cafe - Make a Reservation</title>
   <!-- Latest compiled and minified CSS & JS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -21,42 +21,40 @@
       <h3>Select the option below to reserve your table. View the list for how long the wait will be.</h3>
       <hr>
       <a href="/add"><button class="btn btn-primary btn-lg"><span class="fa fa-plus"></span>View Table</button></a>
-      <a href="/add"><button class="btn btn-danger btn-lg"><span class="fa fa-plus"></span>Make Reservations</button></a>
+      <a href="/"><button class="btn btn-danger btn-lg"><span class="fa fa-plus"></span>Home</button></a>
     </div>
     <div class="row">
 
       <div class="col-12">
 
+          <form>
+            <!--Name-->
+              <div class="form-group">
+                <label for="exampleFormControlInput1">Name</label>
+                <input type="text" class="form-control" id="name">
+              </div>
 
-        <div class="card">
-          <div class="card-header">
-            <h3><strong>Character Statistics</strong></h3>
-          </div>
-          <div class="card-body">
-            <h2 id="name">Yoda</h2>
-            <div id="stats">
-              <h3><strong>Role:</strong> <span id="role">Jedi Master</span></h3>
-              <h3><strong>Age:</strong> <span id="age">900</span></h3>
-              <h3><strong>Force Points:</strong> <span id="force-points">2000</span></h3>
-            </div>
-          </div>
-        </div>
+              <!--Phone Number-->
+              <div class="form-group">
+                  <label for="exampleFormControlInput1">Phone Number</label>
+                  <input type="text" class="form-control" id="phonenumber">
+              </div>
+              
+              <!--Email address-->
+              <div class="form-group">
+                  <label for="exampleFormControlInput1">Email address</label>
+                  <input type="email" class="form-control" id="email" placeholder="name@example.com">
+              </div>
 
-        <div class="card">
-          <div class="card-header">
-            <h3><strong>Character Statistics</strong></h3>
-          </div>
-          <div class="card-body">
-            <h2 id="name">Yoda</h2>
-            <div id="stats">
-              <h3><strong>Role:</strong> <span id="role">Jedi Master</span></h3>
-              <h3><strong>Age:</strong> <span id="age">900</span></h3>
-              <h3><strong>Force Points:</strong> <span id="force-points">2000</span></h3>
-            </div>
-          </div>
-        </div>
+              <!--Unique ID-->
+              <div class="form-group">
+                  <label for="exampleFormControlInput1">Unique ID</label>
+                  <input type="text" class="form-control" id="uniqueID">
+                </div>
 
-
+                <button type="submit" class="btn btn-primary">Submit</button>
+              
+            </form>
 
       </div>
     </div>
